@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "value_iteration"
+version = "0.1.0"
+maintainers = [
+  { name="Riya Raheem", email="riyaraheemk@gmail.com" },
+]
+authors = [
+  { name="Riya Raheem", email="riyaraheemkp@gmail.com"},
+]
+description = "Value iteration to find the optimal policy for a Markov Decision Process"
+readme = "README.md"
+requires-python = ">=3.13.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pytest",
+    "numpy"
+]
+
+[project.urls]
+homepage = "https://github.com/riyarhm/value_iteration"

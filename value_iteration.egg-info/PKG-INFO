@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: value_iteration
+Version: 0.1.0
+Summary: Value iteration to find the optimal policy for a Markov Decision Process
+Author-email: Riya Raheem <riyaraheemkp@gmail.com>
+Maintainer-email: Riya Raheem <riyaraheemk@gmail.com>
+Project-URL: homepage, https://github.com/riyarhm/value_iteration
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.13.10
+Description-Content-Type: text/markdown
+Requires-Dist: pytest
+Requires-Dist: numpy

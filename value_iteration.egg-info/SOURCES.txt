@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+tests/test_solver.py
+value_iteration/__init__.py
+value_iteration/solver.py
+value_iteration/utilities.py
+value_iteration.egg-info/PKG-INFO
+value_iteration.egg-info/SOURCES.txt
+value_iteration.egg-info/dependency_links.txt
+value_iteration.egg-info/requires.txt
+value_iteration.egg-info/top_level.txt
