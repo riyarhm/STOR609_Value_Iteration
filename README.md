@@ -87,7 +87,7 @@ for s in S:
 ```
 
 ###  2x2 Gridworld example
-To see a more detailed application of how this package solves and visualises the stochastic 2x2 Grid World for Assessment , see the Jupyter Notebook in the examples/ directory: examples/grid_world.ipynb.
+To see a more detailed application of how this package solves and visualises the stochastic 2x2 Grid World for Assessment , see the Jupyter Notebook in the [examples/grid_world.ipynb](examples/grid_world.ipynb).
 
 
 ## **Algorithm and Pseudocode**
@@ -98,7 +98,7 @@ For a detailed look at the algorithm's pseudocode and a direct architectural com
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License.
 
 ## **Github Repository**
-Source files for the package can be found at https://github.com/riyarhm/value_iteration/tree/main.
+Source files for the package can be found at [https://github.com/riyarhm/STOR609_Value_Iteration](https://github.com/riyarhm/STOR609_Value_Iteration)
 
 ## **Contributors**
 - Riya Raheem [email](mailto:riyaraheemkp@gmail.com) (**Author**)
