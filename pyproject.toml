@@ -25,4 +25,4 @@ dependencies = [
 ]
 
 [project.urls]
-homepage = "https://github.com/riyarhm/value_iteration"
+homepage = "https://github.com/riyarhm/STOR609_Value_Iteration"
