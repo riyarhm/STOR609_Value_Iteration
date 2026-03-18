@@ -98,7 +98,7 @@ For a detailed look at the algorithm's pseudocode and a direct architectural com
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License.
 
 ## **Github Repository**
-Source files for the package can be found at [https://github.com/riyarhm/STOR609_Value_Iteration](https://github.com/riyarhm/STOR609_Value_Iteration)
+Source files for the package can be found at [https://github.com/riyarhm/STOR609_Value_Iteration/value_iteration](https://github.com/riyarhm/STOR609_Value_Iteration/value_iteration)
 
 ## **Contributors**
 - Riya Raheem [email](mailto:riyaraheemkp@gmail.com) (**Author**)
