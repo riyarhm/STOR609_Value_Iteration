@@ -30,7 +30,7 @@ To learn more about MDPs and the value iteration algorithm, the user can refer t
 This python package can be installed from GitHub with pip.
 #### installing from github with pip
 ``` python
-python -m pip install "git+[https://github.com/riyarhm/STOR609_Value_Iteration]"
+python -m pip install "git+https://github.com/riyarhm/STOR609_Value_Iteration#subdirectory=value_iteration"
 ```
 
 ## **Example**
@@ -98,7 +98,7 @@ For a detailed look at the algorithm's pseudocode and a direct architectural com
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License.
 
 ## **Github Repository**
-Source files for the package can be found at [https://github.com/riyarhm/STOR609_Value_Iteration/value_iteration](https://github.com/riyarhm/STOR609_Value_Iteration/value_iteration)
+Source files for the package can be found at [https://github.com/riyarhm/STOR609_Value_Iteration/tree/main/value_iteration](https://github.com/riyarhm/STOR609_Value_Iteration/tree/main/value_iteration).
 
 ## **Contributors**
 - Riya Raheem [email](mailto:riyaraheemkp@gmail.com) (**Author**)
