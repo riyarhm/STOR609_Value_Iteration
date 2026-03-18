@@ -20,9 +20,10 @@ For a range of problems that can be modelled as MDPs, the value iteration algori
 To learn more about MDPs and the value iteration algorithm, the user can refer to Sections [9.5](https://artint.info/2e/html2e/ArtInt2e.Ch9.S5.html) and [9.5.1](https://artint.info/2e/html2e/ArtInt2e.Ch9.S5.SS1.html) of [Artificial Intelligence: Foundations and Computational Agents 2nd edition](https://artint.info/2e/html2e/ArtInt2e.html).
 
 **Key Features**
-- Implements the asynchronous (Gauss-Seidel) value iteration function, which often converges faster than the standard synchronous version.
-- Includes an interactive example of the Assessment 2x2 Gridworld problem solved and visualised using `seaborn`.
-- Designed with a modular structure, decoupling environment transition dynamics from the solver engine to allow for high reusability.
+- Asynchronous Solver: Implements a Gauss-Seidel update rule that speeds up convergence by using the most recently calculated values within a single iteration.
+- Environment-Agnostic Design: The solver does not depend on a specific grid or problem shape. It accepts any MDP defined by a standard transition and reward dictionary.
+- Verification Suite: Includes built-in unit tests (`pytest`) and visualization tools in the 2x2 Gridworld problem (`seaborn` heatmaps) to verify the accuracy and stability of the calculated optimal policy.
+- Extensible Architecture: Designed so that new reward structures or transition dynamics can be plugged in without modifying the core algorithm.
 
 
 ## **Installation**
@@ -61,41 +62,26 @@ Sam estimates his immediate rewards to be:
 
 **The problem is to determine what Sam should do each weekend.**
 
-```python
-from value_iteration import value_iteration
+The detailed code of this is given in [examples/sam_example.py](examples/sam_example.py).
 
-# 1. Define the environment dynamics
-S = {"healthy", "sick"}
-# Format: transitions[state][action] = [(probability, next_state, reward), ...]
-transitions = {
-    'healthy': {
-        'relax': [(0.95, 'healthy', 7.0), (0.05, 'sick', 7.0)],
-        'party': [(0.70, 'healthy', 10.0), (0.30, 'sick', 10.0)]
-    },
-    'sick': {
-        'relax': [(0.50, 'healthy', 0.0), (0.50, 'sick', 0.0)],
-        'party': [(0.10, 'healthy', 2.0), (0.90, 'sick', 2.0)]
-    }
-}
-
-# 2. Implement the value iteration algorithm
-V, policy = value_iteration(S, transitions, gamma=0.9)
-
-# 3. Display results
-for s in S:
-    print(f"If {s}, then Sam should {policy[s]}.")
-```
+After running the code above with a discount factor of γ=0.9, the solver produces the following optimal policy:
+If healthy, then Sam should party.
+If sick, then Sam should relax.
 
 ###  2x2 Gridworld example
 To see a more detailed application of how this package solves and visualises the stochastic 2x2 Grid World for Assessment , see the Jupyter Notebook in the [examples/grid_world.ipynb](examples/grid_world.ipynb).
 
 
 ## **Algorithm and Pseudocode**
-For a detailed look at the algorithm's pseudocode and a direct architectural comparison to Figure 9.16 in Poole and Mackworth, please see the PSEUDOCODE.md file in this repository.
+For a detailed look at the algorithm's pseudocode and a direct architectural comparison to Figure 9.16 in Poole and Mackworth, please see the [PSEUDOCODE.md](PSEUDOCODE.md) file in this repository.
 
 
 ## **License**
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License.
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0.txt>.
 
 ## **Github Repository**
 Source files for the package can be found at [https://github.com/riyarhm/STOR609_Value_Iteration/tree/main/value_iteration](https://github.com/riyarhm/STOR609_Value_Iteration/tree/main/value_iteration).
