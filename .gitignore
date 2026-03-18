@@ -1,3 +1,14 @@
+# Environments
 env/
+
+# Python Build Artifacts
 __pycache__/
-.pytest_cache/
+*.pyc
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+
