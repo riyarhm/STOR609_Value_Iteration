@@ -1,19 +1,32 @@
 def get_assessment_grid_world():
     """
-    Generates the specific Grid World MDP required.
+    Generates the specific 2x2 Grid World MDP required for Assessment.
     
+    This function declaratively defines the state space, terminal states, 
+    and the stochastic transition dynamics (which intrinsically include 
+    the expected rewards) for the assessment's specific problem. By separating 
+    this data generation from the mathematical solver, the codebase remains 
+    modular and reusable.
+
     Returns:
     --------
-    states : list
+    states : list of str
+        The complete state space representing the 2x2 grid: ['TL', 'TR', 'BL', 'BR'].
     transitions : dict
-    terminal_states : list
+        A nested dictionary representing the transition probabilities P(s'|s,a) 
+        and expected rewards R(s',s,a). 
+        Format: transitions[current_state][action] = [(probability, next_state, reward), ...]
+    terminal_states : list of str
+        States that safely terminate the MDP episode (values remain 0).
     """
     # Define all possible states
     states = ['TL', 'TR', 'BL', 'BR']
     
+    # Define Terminal state
     # State BR is explicitly defined as terminal
     terminal_states = ['BR']
     
+    # Define Transition dynamics and rewards
     # Transitions map: state -> action -> list of (probability, next_state, reward)
     transitions = {
         'TL': {
